@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+        eywebappdemo:
+                image: eywebappdemoapp:v10
+                # default it is taking as docker file otherwise under build you have to write context : . location under contection
+                build:
+                        context: .
+                        dockerfile: girijaweb.dockerfile
+                container_name: eywebappcontainer
+                ports:
+                - "6754:80"
